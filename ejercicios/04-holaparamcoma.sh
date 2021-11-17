@@ -6,8 +6,11 @@ if [[ $# < 1 ]]; then
 	exit 1
 fi
 
-TEXTO="$1"
+for i in `seq 1 1 $#`; do
+	TEXTO=TEXTO+$1
+	shift 1;
+done;
 
-echo $TEXTO
+echo "Hola $TEXTO"
 
 exit 0
