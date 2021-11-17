@@ -5,10 +5,10 @@ if [[ $# < 1 ]]; then
 	echo 'Ejemplo: ~# ./'$0' parametro1 parametro2 parametro3...'
 	exit 1
 fi
-
+TEXTO="$1"
 for i in `seq 1 1 $#`; do
-	TEXTO=TEXTO+$1
 	shift 1;
+	TEXTO=$TEXTO", "$1
 done;
 
 echo "Hola $TEXTO"
